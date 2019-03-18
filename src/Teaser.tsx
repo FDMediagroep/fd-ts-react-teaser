@@ -7,6 +7,8 @@ import UpdateLabel, { UpdateLabelStyle } from "./UpdateLabel";
 import TeaserRelated, { TeaserRelatedStyle, RelatedArticle } from "./TeaserRelated";
 import TeaserFooter, { TeaserFooterStyle } from "./TeaserFooter";
 
+export {TeaserFigure, TeaserFooter, TeaserRelated, UpdateLabel};
+
 export interface Props {
     baseUrl: string;
     bookmarked?: boolean;

@@ -1,7 +1,10 @@
 import React, { PureComponent } from "react";
 import { CardTypes } from "@fdmg/fd-card";
-import { Theme } from "./TeaserFigure";
-import { RelatedArticle } from "./TeaserRelated";
+import TeaserFigure, { Theme } from "./TeaserFigure";
+import UpdateLabel from "./UpdateLabel";
+import TeaserRelated, { RelatedArticle } from "./TeaserRelated";
+import TeaserFooter from "./TeaserFooter";
+export { TeaserFigure, TeaserFooter, TeaserRelated, UpdateLabel };
 export interface Props {
     baseUrl: string;
     bookmarked?: boolean;
