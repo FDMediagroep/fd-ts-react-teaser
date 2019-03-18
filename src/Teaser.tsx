@@ -3,11 +3,14 @@ import { createGlobalStyle } from "styled-components";
 import Card, { getAllCardStyles, CardTypes } from "@fdmg/fd-card";
 import TypoGraphy, {getAllTextStyles} from "@fdmg/fd-typography";
 import TeaserFigure, { Theme, TeaserFigureStyle } from "./TeaserFigure";
-import UpdateLabel, { UpdateLabelStyle } from "./UpdateLabel";
-import TeaserRelated, { TeaserRelatedStyle, RelatedArticle } from "./TeaserRelated";
 import TeaserFooter, { TeaserFooterStyle } from "./TeaserFooter";
+import TeaserRelated, { TeaserRelatedStyle, RelatedArticle } from "./TeaserRelated";
+import UpdateLabel, { UpdateLabelStyle } from "./UpdateLabel";
 
-export {TeaserFigure, TeaserFooter, TeaserRelated, UpdateLabel};
+export {TeaserFigure, TeaserFigureStyle, Theme};
+export {TeaserFooter, TeaserFooterStyle};
+export {TeaserRelated, TeaserRelatedStyle, RelatedArticle};
+export {UpdateLabel, UpdateLabelStyle};
 
 export interface Props {
     baseUrl: string;
