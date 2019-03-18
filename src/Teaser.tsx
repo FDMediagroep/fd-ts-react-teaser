@@ -27,7 +27,7 @@ export interface Props {
     readableAge: string;
     related?: RelatedArticle[];
     shareTitle?: string;
-    sourceSets?: {media: '(max-width: 640px)' | '(max-width: 860px)' | '(min-width: 861px)', srcSet: string}[]
+    sourceSets?: [{media: '(max-width: 640px)' | '(max-width: 860px)' | '(min-width: 861px)', srcSet: string}];
     subject: string;
     theme?: Theme;
     title: string;

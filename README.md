@@ -25,7 +25,20 @@ import Teaser from '@fdmg/fd-teaser';
         description="Containers van warenhuizen als Amazon en Alibaba bevatten een veelheid aan producten die allemaal apart ingeklaard moeten worden."
         url="https://dev.fd.nl/ondernemen/1254849/douane-20-tot-30-meer-aangiftes-door-groei-in-webwinkelen"
         hashTags="#Kitchensink"
-        imageUrl="https://fd-external-development.imgix.net/43ed7a431f43ef9a3d43afd82d6ccbeb82610ffa.jpg"
+        image: {
+            src: 'https://images.fd.nl/h7f0-gZo7t8HbiVhcWgo5x8HPaA.jpg?fit=crop&crop=faces&auto=format&fm=jpg&q=45&w=599&h=337&rect=',
+            alt: 'Amsterdam doet ertoe'
+        },
+        sourceSets: [{
+            media: '(max-width: 640px)',
+            srcSet: `https://images.fd.nl/h7f0-gZo7t8HbiVhcWgo5x8HPaA.jpg?fit=crop&crop=faces&auto=format&fm=jpg&q=45&w=599&h=337&rect=`
+        }, {
+            media: '(max-width: 860px)',
+            srcSet: `https://images.fd.nl/h7f0-gZo7t8HbiVhcWgo5x8HPaA.jpg?fit=crop&crop=faces&auto=format&fm=jpg&q=45&w=115&h=115&rect=`
+        }, {
+            media: '(min-width: 861px)',
+            srcSet: `https://images.fd.nl/h7f0-gZo7t8HbiVhcWgo5x8HPaA.jpg?fit=crop&crop=faces&auto=format&fm=jpg&q=45&w=115&h=115&rect=`
+        }],
         alt="Douane: 20 tot 30% meer aangiftes door groei in webwinkelen"
         onBookmark={() => {}}
         subject="Monetair"

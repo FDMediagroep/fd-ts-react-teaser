@@ -117,8 +117,8 @@ const GlobalStyle = createGlobalStyle`
             &:empty {
                 padding-left: 0;
             }
-            @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
-                /* IE10+ specific styles go here */  
+            @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                /* IE10+ specific styles go here */
                 padding-top: .5rem;
             }
             i, span {
