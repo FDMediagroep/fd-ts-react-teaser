@@ -2,15 +2,20 @@ import React, { PureComponent } from "react";
 import { createGlobalStyle } from "styled-components";
 import Card, { getAllCardStyles, CardTypes } from "@fdmg/fd-card";
 import TypoGraphy, {getAllTextStyles} from "@fdmg/fd-typography";
-import TeaserFigure, { Theme, TeaserFigureStyle } from "./TeaserFigure";
+import TeaserFigure, { Theme, TeaserFigureStyle, ImageType } from "./TeaserFigure";
 import TeaserFooter, { TeaserFooterStyle } from "./TeaserFooter";
 import TeaserRelated, { TeaserRelatedStyle, RelatedArticle } from "./TeaserRelated";
 import UpdateLabel, { UpdateLabelStyle } from "./UpdateLabel";
 
-export {TeaserFigure, TeaserFigureStyle, Theme};
+export {TeaserFigure, TeaserFigureStyle, Theme, ImageType};
 export {TeaserFooter, TeaserFooterStyle};
 export {TeaserRelated, TeaserRelatedStyle, RelatedArticle};
 export {UpdateLabel, UpdateLabelStyle};
+
+export interface SourceSet {
+    media: '(max-width: 640px)' | '(max-width: 860px)' | '(min-width: 861px)';
+    srcSet: string;
+}
 
 export interface Props {
     baseUrl: string;
@@ -24,15 +29,12 @@ export interface Props {
     hashTags?: string;
     hideFooter?: boolean;
     id: string;
-    image?: {
-        src: string,
-        alt: string
-    };
+    image?: ImageType;
     onBookmark?: (e: React.MouseEvent<HTMLElement>) => void;
     readableAge: string;
     related?: RelatedArticle[];
     shareTitle?: string;
-    sourceSets?: [{media: '(max-width: 640px)' | '(max-width: 860px)' | '(min-width: 861px)', srcSet: string}];
+    sourceSets?: SourceSet[];
     subject: string;
     theme?: Theme;
     title: string;
@@ -41,11 +43,6 @@ export interface Props {
 }
 
 export default class Teaser extends PureComponent<Props, any> {
-    state: any = {
-        image: this.props.image,
-        sourceSets: this.props.sourceSets
-    };
-
     render() {
         return (
             <>
@@ -54,8 +51,8 @@ export default class Teaser extends PureComponent<Props, any> {
                     <a href={this.props.url}>
                         <TeaserFigure
                             figCaption={this.props.figCaption}
-                            image={this.state.image}
-                            sourceSets={this.state.sourceSets}
+                            image={this.props.image}
+                            sourceSets={this.props.sourceSets}
                             theme={this.props.theme}
                         />
                         <div className="meta">

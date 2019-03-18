@@ -1,9 +1,9 @@
 import { PureComponent } from "react";
-interface SourceSetType {
+export interface SourceSetType {
     media: string;
     srcSet: string;
 }
-interface ImageType {
+export interface ImageType {
     alt: string;
     title?: string;
     src: string;

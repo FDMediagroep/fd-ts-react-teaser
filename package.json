@@ -1,6 +1,6 @@
 {
   "name": "@fdmg/fd-teaser",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "FD-themed default teaser",
   "types": "dist/Teaser.d.ts",
   "main": "dist/teaser.js",
