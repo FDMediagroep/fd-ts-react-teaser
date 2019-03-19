@@ -56,6 +56,21 @@ describe('Teaser', () => {
         expect(teaser.toJSON()).toMatchSnapshot();
     });
 
+    test('renders hidden footer correctly', () => {
+        let teaser = TestRenderer.create(<Teaser {...teaserData} hideFooter={true}/>);
+        expect(teaser.toJSON()).toMatchSnapshot();
+    });
+
+    test('renders hidden meta correctly', () => {
+        let teaser = TestRenderer.create(<Teaser {...teaserData} hideMeta={true}/>);
+        expect(teaser.toJSON()).toMatchSnapshot();
+    });
+
+    test('renders hidden related correctly', () => {
+        let teaser = TestRenderer.create(<Teaser {...teaserData} hideRelated={true}/>);
+        expect(teaser.toJSON()).toMatchSnapshot();
+    });
+
     test('renders longread correctly', () => {
         let teaser = TestRenderer.create(<Teaser {...teaserData} cardStyle='longread'/>);
         expect(teaser.toJSON()).toMatchSnapshot();

@@ -23,6 +23,8 @@ export interface Props {
     figCaption?: string;
     hashTags?: string;
     hideFooter?: boolean;
+    hideMeta?: boolean;
+    hideRelated?: boolean;
     id: string;
     image?: ImageType;
     onBookmark?: (e: React.MouseEvent<HTMLElement>) => void;

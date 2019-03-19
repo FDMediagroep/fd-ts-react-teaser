@@ -28,6 +28,8 @@ export interface Props {
     figCaption?: string;
     hashTags?: string;
     hideFooter?: boolean;
+    hideMeta?: boolean;
+    hideRelated?: boolean;
     id: string;
     image?: ImageType;
     onBookmark?: (e: React.MouseEvent<HTMLElement>) => void;
@@ -55,18 +57,18 @@ export default class Teaser extends PureComponent<Props, any> {
                             sourceSets={this.props.sourceSets}
                             theme={this.props.theme}
                         />
-                        <div className="meta">
+                        {this.props.hideMeta ? null : <div className="meta">
                             {this.props.updated ? <UpdateLabel/> : <span className="prefix">{this.props.subject}</span>}
                             <time>{this.props.readableAge}</time>
-                        </div>
+                        </div>}
                         <div className="text-container">
                             <TypoGraphy textStyle="teaser-h"><h1>{this.props.title}</h1></TypoGraphy>
                             {this.props.description ? <p className="intro">{this.props.description}</p> : null}
                         </div>
                     </a>
-                    <TeaserRelated
+                    {this.props.hideRelated ? null : <TeaserRelated
                         items={this.props.related}
-                    />
+                    />}
                     {this.props.hideFooter ? null : <TeaserFooter
                         baseUrl={this.props.baseUrl}
                         bookmarked={this.props.bookmarked}
