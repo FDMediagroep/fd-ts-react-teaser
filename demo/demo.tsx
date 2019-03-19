@@ -15,6 +15,9 @@ const GlobalStyle = createGlobalStyle`
         &.persoonlijk {
             background-color: white;
         }
+        .fd-teaser {
+            margin-bottom: 1rem;
+        }
     }
 `;
 
@@ -74,6 +77,14 @@ class App extends PureComponent<any, any> {
                     {...this.state.teaser}
                     id={uniqid()}
                     onBookmark={this.onBookmark}
+                />
+                <Teaser
+                    {...this.state.teaser}
+                    id={uniqid()}
+                    onBookmark={this.onBookmark}
+                    hideFooter={true}
+                    hideMeta={true}
+                    hideRelated={true}
                 />
             </>
         );

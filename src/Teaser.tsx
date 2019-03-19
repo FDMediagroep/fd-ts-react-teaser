@@ -49,7 +49,7 @@ export default class Teaser extends PureComponent<Props, any> {
         return (
             <>
                 <GlobalStyle/>
-                <Card cardStyle={this.props.cardStyle ? this.props.cardStyle : 'default'} id={this.props.id} className={`fd-teaser${this.props.className ? ` ${this.props.className}` : ''}`}>
+                <Card cardStyle={this.props.cardStyle ? this.props.cardStyle : 'default'} id={this.props.id} className={`fd-teaser${this.props.className ? ` ${this.props.className}` : ''}${this.props.hideMeta ? ' no-meta' : ''}`}>
                     <a href={this.props.url}>
                         <TeaserFigure
                             figCaption={this.props.figCaption}
@@ -94,7 +94,9 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'ProximaNovaRegular', Helvetica, sans-serif;
 
     @media only screen and (min-width: 641px) {
-        padding-top: 45px; /* Hack to make meta stick to top of component and the rest of the content stay below. */
+        &:not(.no-meta) {
+            padding-top: 45px; /* Hack to make meta stick to top of component and the rest of the content stay below. */
+        }
     }
 
     .meta,
@@ -126,11 +128,8 @@ const GlobalStyle = createGlobalStyle`
             @media only screen and (min-width: 641px) {
                 float: right;
                 width: 115px;
-                margin: 0 0 10px 10px;
-            }
-            @media only screen and (min-width: 641px) {
+                margin: 0 0 12px 10px;
                 padding: 0 12px;
-                margin-bottom: 12px;
             }
             @media only screen and (min-width: 861px) {
                 padding: 0 15px;
@@ -167,6 +166,17 @@ const GlobalStyle = createGlobalStyle`
             font-size: 1rem;
             @media only screen and (min-width: 641px) {
                 font-size: 1.0625rem;
+            }
+        }
+    }
+
+    &.no-meta {
+        > a {
+            @media only screen and (min-width: 641px) {
+                margin-top: 12px;
+            }
+            @media only screen and (min-width: 861px) {
+                margin-top: 15px;
             }
         }
     }

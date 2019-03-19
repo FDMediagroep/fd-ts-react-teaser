@@ -419,7 +419,7 @@ exports[`Teaser renders hidden footer correctly 1`] = `
 exports[`Teaser renders hidden meta correctly 1`] = `
 <div
   cardStyle="default"
-  className="fd-card fd-teaser default"
+  className="fd-card fd-teaser no-meta default"
   id="1286721"
 >
   <a
