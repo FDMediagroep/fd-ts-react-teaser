@@ -1,7 +1,6 @@
 import TestRenderer from 'react-test-renderer';
 import Teaser from '../src/Teaser';
 import React from 'react';
-import uniqid from 'uniqid';
 
 describe('Teaser', () => {
     const teaserData: any = {
@@ -33,11 +32,11 @@ describe('Teaser', () => {
             longread: true,
             title: '"Als vrouw moet je altijd onafhankelijk zijn"',
             url: 'https://dev.fd.nl/profiel/1235280/als-vrouw-moet-je-onafhankelijk-zijn',
-            uuid: uniqid()
+            uuid: '12345'
         }, {
             title: 'President van de Amerikaanse Fed hamert op onafhankelijkheid',
             url: 'https://dev.fd.nl/economie-politiek/1235274/president-van-de-amerikaanse-fed-hamert-op-onafhankelijkheid',
-            uuid: uniqid()
+            uuid: '123456'
         }]
     };
 
