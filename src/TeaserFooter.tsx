@@ -27,7 +27,7 @@ export default class TeaserFooter extends PureComponent<Props, any> {
                 <footer className={`fd-teaser-footer${this.props.className ? ` ${this.props.className}` : ''}`}>
                     <menu>
                         <span className="placeholder"/>
-                        <a className="share-social" tabIndex={0} href="javascript: void(0);">
+                        <a className="share-social" href="javascript: void(0);">
                             <i
                                 data-url={this.props.url}
                                 data-id={this.props.teaserId}
@@ -51,7 +51,6 @@ export default class TeaserFooter extends PureComponent<Props, any> {
                             title="Bewaren"
                             id={`favorite${this.props.teaserId}`}
                             onClick={this.props.onBookmark}
-                            tabIndex={0}
                         >
                             <i className="icon-bookmark" title={this.props.bookmarkTitle ? this.props.bookmarkTitle : 'Bewaren'}/>
                             <i className="icon-bookmark1" title={this.props.removeBookmarkTitle ? this.props.removeBookmarkTitle : 'Verwijder van bewaarlijst'}/>

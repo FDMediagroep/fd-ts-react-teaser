@@ -99,7 +99,6 @@ exports[`Teaser renders bookmarked correctly 1`] = `
       <a
         className="share-social"
         href="javascript: void(0);"
-        tabIndex={0}
       >
         <i
           className="icon-share-alt"
@@ -125,7 +124,6 @@ exports[`Teaser renders bookmarked correctly 1`] = `
         data-url="https://fd.nl/economie-politiek/1286721/amsterdam-doet-er-toe"
         href="javascript: void(0);"
         id="favorite1286721"
-        tabIndex={0}
         title="Bewaren"
       >
         <i
@@ -265,7 +263,6 @@ exports[`Teaser renders correctly 1`] = `
       <a
         className="share-social"
         href="javascript: void(0);"
-        tabIndex={0}
       >
         <i
           className="icon-share-alt"
@@ -291,7 +288,6 @@ exports[`Teaser renders correctly 1`] = `
         data-url="https://fd.nl/economie-politiek/1286721/amsterdam-doet-er-toe"
         href="javascript: void(0);"
         id="favorite1286721"
-        tabIndex={0}
         title="Bewaren"
       >
         <i
@@ -511,7 +507,6 @@ exports[`Teaser renders hidden meta correctly 1`] = `
       <a
         className="share-social"
         href="javascript: void(0);"
-        tabIndex={0}
       >
         <i
           className="icon-share-alt"
@@ -537,7 +532,6 @@ exports[`Teaser renders hidden meta correctly 1`] = `
         data-url="https://fd.nl/economie-politiek/1286721/amsterdam-doet-er-toe"
         href="javascript: void(0);"
         id="favorite1286721"
-        tabIndex={0}
         title="Bewaren"
       >
         <i
@@ -647,7 +641,6 @@ exports[`Teaser renders hidden related correctly 1`] = `
       <a
         className="share-social"
         href="javascript: void(0);"
-        tabIndex={0}
       >
         <i
           className="icon-share-alt"
@@ -673,7 +666,6 @@ exports[`Teaser renders hidden related correctly 1`] = `
         data-url="https://fd.nl/economie-politiek/1286721/amsterdam-doet-er-toe"
         href="javascript: void(0);"
         id="favorite1286721"
-        tabIndex={0}
         title="Bewaren"
       >
         <i
@@ -813,7 +805,6 @@ exports[`Teaser renders longread correctly 1`] = `
       <a
         className="share-social"
         href="javascript: void(0);"
-        tabIndex={0}
       >
         <i
           className="icon-share-alt"
@@ -839,7 +830,6 @@ exports[`Teaser renders longread correctly 1`] = `
         data-url="https://fd.nl/economie-politiek/1286721/amsterdam-doet-er-toe"
         href="javascript: void(0);"
         id="favorite1286721"
-        tabIndex={0}
         title="Bewaren"
       >
         <i
@@ -979,7 +969,6 @@ exports[`Teaser renders multiple comments correctly 1`] = `
       <a
         className="share-social"
         href="javascript: void(0);"
-        tabIndex={0}
       >
         <i
           className="icon-share-alt"
@@ -1005,7 +994,6 @@ exports[`Teaser renders multiple comments correctly 1`] = `
         data-url="https://fd.nl/economie-politiek/1286721/amsterdam-doet-er-toe"
         href="javascript: void(0);"
         id="favorite1286721"
-        tabIndex={0}
         title="Bewaren"
       >
         <i
@@ -1145,7 +1133,6 @@ exports[`Teaser renders persoonlijk correctly 1`] = `
       <a
         className="share-social"
         href="javascript: void(0);"
-        tabIndex={0}
       >
         <i
           className="icon-share-alt"
@@ -1171,7 +1158,6 @@ exports[`Teaser renders persoonlijk correctly 1`] = `
         data-url="https://fd.nl/economie-politiek/1286721/amsterdam-doet-er-toe"
         href="javascript: void(0);"
         id="favorite1286721"
-        tabIndex={0}
         title="Bewaren"
       >
         <i
@@ -1311,7 +1297,6 @@ exports[`Teaser renders persoonlijk longread correctly 1`] = `
       <a
         className="share-social"
         href="javascript: void(0);"
-        tabIndex={0}
       >
         <i
           className="icon-share-alt"
@@ -1337,7 +1322,6 @@ exports[`Teaser renders persoonlijk longread correctly 1`] = `
         data-url="https://fd.nl/economie-politiek/1286721/amsterdam-doet-er-toe"
         href="javascript: void(0);"
         id="favorite1286721"
-        tabIndex={0}
         title="Bewaren"
       >
         <i
