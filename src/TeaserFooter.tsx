@@ -27,7 +27,7 @@ export default class TeaserFooter extends PureComponent<Props, any> {
                 <footer className={`fd-teaser-footer${this.props.className ? ` ${this.props.className}` : ''}`}>
                     <menu>
                         <span className="placeholder"/>
-                        <span className="share-social">
+                        <a className="share-social" tabIndex={0} href="javascript: void(0);">
                             <i
                                 data-url={this.props.url}
                                 data-id={this.props.teaserId}
@@ -38,8 +38,9 @@ export default class TeaserFooter extends PureComponent<Props, any> {
                                 title={this.props.shareTitle ? this.props.shareTitle : 'Delen'}
                             />
                             <span className="icon-label">Delen</span>
-                        </span>
-                        <span
+                        </a>
+                        <a
+                            href="javascript: void(0);"
                             className={`favorite${this.props.bookmarked ? ' selected' : ''}`}
                             data-key={this.props.teaserId}
                             data-addurl='/add-favorite'
@@ -50,11 +51,12 @@ export default class TeaserFooter extends PureComponent<Props, any> {
                             title="Bewaren"
                             id={`favorite${this.props.teaserId}`}
                             onClick={this.props.onBookmark}
+                            tabIndex={0}
                         >
                             <i className="icon-bookmark" title={this.props.bookmarkTitle ? this.props.bookmarkTitle : 'Bewaren'}/>
                             <i className="icon-bookmark1" title={this.props.removeBookmarkTitle ? this.props.removeBookmarkTitle : 'Verwijder van bewaarlijst'}/>
                             <span className="icon-label">Bewaren</span>
-                        </span>
+                        </a>
                         <a data-articleid={this.props.teaserId} className="comments-link" href={`${this.props.url}#comments`}>
                             {this.props.comments ? (
                                 <>
@@ -106,11 +108,14 @@ const GlobalStyle = createGlobalStyle`
             font-size: 1.125rem;
         }
 
-        > span, .comments-link {
+        > span.placeholder {
+            flex: 1 1 auto;
+        }
+
+        > a {
             flex: 0 0 auto;
-            &:first-child {
-                flex: 1 1 auto;
-            }
+            color: #677381;
+            font-family: 'ProximaNovaRegular', sans-serif;
             display: inline-flex;
             align-items: center;
             padding-left: 1rem;
@@ -121,9 +126,14 @@ const GlobalStyle = createGlobalStyle`
                 /* IE10+ specific styles go here */
                 padding-top: .5rem;
             }
+
             i, span {
                 font-size: 0.8125rem;
                 cursor: pointer;
+            }
+
+            .comments-suffix {
+                margin-left: .2rem;
             }
         }
 
@@ -148,22 +158,11 @@ const GlobalStyle = createGlobalStyle`
                     display: none;
                 }
                 .icon-bookmark1 {
-                    display: initial;
+                    display: inline;
                 }
             }
         }
 
-        .comments-link {
-            color: #677381;
-            font-family: 'ProximaNovaRegular', sans-serif;
-            span {
-                font-size: 0.8125rem;
-                cursor: pointer;
-            }
-            .comments-suffix {
-                margin-left: .2rem;
-            }
-        }
         @media only screen and (max-width: 640px) {
             .icon-label,
             .comments-suffix {
