@@ -47,9 +47,9 @@ const GlobalStyle = createGlobalStyle`
         text-decoration: none;
     }
     .related-link {
-        margin: initial; // Reset for fd.screen.scss
-        background: initial; // Reset for fd.screen.scss
-        box-shadow: initial; // Reset for fd.screen.scss
+        margin: 0; // Reset for fd.screen.scss
+        background: none; // Reset for fd.screen.scss
+        box-shadow: none; // Reset for fd.screen.scss
         font-family: 'ProximaNovaRegular', sans-serif;
         border-top: 1px solid rgba(0,0,0,0.1);
         text-decoration: none;
