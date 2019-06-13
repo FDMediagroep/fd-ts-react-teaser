@@ -19,40 +19,37 @@ After the build succeeded you can open `dist/demo.html` with your webbrowser.
 import Teaser from '@fdmg/fd-teaser';
 ...
 <Teaser
-        id="123"
-        bookmarked={false}
-        comments={99}
-        description="Containers van warenhuizen als Amazon en Alibaba bevatten een veelheid aan producten die allemaal apart ingeklaard moeten worden."
-        url="https://dev.fd.nl/ondernemen/1254849/douane-20-tot-30-meer-aangiftes-door-groei-in-webwinkelen"
-        hashTags="#Kitchensink"
-        image: {
-            src: 'https://images.fd.nl/h7f0-gZo7t8HbiVhcWgo5x8HPaA.jpg?fit=crop&crop=faces&auto=format&fm=jpg&q=45&w=599&h=337&rect=',
-            alt: 'Amsterdam doet ertoe'
-        },
-        sourceSets: [{
-            media: '(max-width: 640px)',
-            srcSet: `https://images.fd.nl/h7f0-gZo7t8HbiVhcWgo5x8HPaA.jpg?fit=crop&crop=faces&auto=format&fm=jpg&q=45&w=599&h=337&rect=`
-        }, {
-            media: '(max-width: 860px)',
-            srcSet: `https://images.fd.nl/h7f0-gZo7t8HbiVhcWgo5x8HPaA.jpg?fit=crop&crop=faces&auto=format&fm=jpg&q=45&w=115&h=115&rect=`
-        }, {
-            media: '(min-width: 861px)',
-            srcSet: `https://images.fd.nl/h7f0-gZo7t8HbiVhcWgo5x8HPaA.jpg?fit=crop&crop=faces&auto=format&fm=jpg&q=45&w=115&h=115&rect=`
-        }],
-        alt="Douane: 20 tot 30% meer aangiftes door groei in webwinkelen"
-        onBookmark={() => {}}
-        subject="Monetair"
-        readableAge="7 uur"
-        related={[{
-            longread: true,
-            title: '‘Als vrouw moet je altijd onafhankelijk zijn’',
-            url: 'https://dev.fd.nl/profiel/1235280/als-vrouw-moet-je-onafhankelijk-zijn',
-            uuid: "234"
-        }, {
-            title: 'President van de Amerikaanse Fed hamert op onafhankelijkheid',
-            url: 'https://dev.fd.nl/economie-politiek/1235274/president-van-de-amerikaanse-fed-hamert-op-onafhankelijkheid',
-            uuid: "345"
-        }]}
-        title="Douane: 20 tot 30% meer aangiftes door groei in webwinkelen"
-    />
+    id="123"
+    title="Congo verwacht weinig van Nederlands ebola-vaccin"
+    description="Autoriteiten in het Afrikaanse land vrezen toename van verzet en verwarring bij inzet van tweede vaccin, dat in Nederland wordt gemaakt."
+    baseUrl=""
+    url="/economie-politiek/1304718/congo-verwacht-weinig-van-nederlands-ebola-vaccin"
+    readableAge="2 uur"
+    date="13:11 13-06-2019"
+    subject="buitenland"
+    image={{
+        src: 'https://images.fd.nl/BjzAQW5j11hip-ad0R6OxM0CJoA.jpg?fit=crop&crop=faces&auto=format&w=599&h=337&q=45&fm=jpg&cs=tinysrgb&rect=.0%2C.0787992495309568%2C.9999999999999999%2C.8442776735459663',
+        alt: 'Congo verwacht weinig van Nederlands ebola-vaccin'
+    }}
+    sourceSets={[{
+        media: '(max-width: 640px)',
+        srcSet: `https://images.fd.nl/BjzAQW5j11hip-ad0R6OxM0CJoA.jpg?fit=crop&crop=faces&auto=format&w=599&h=337&q=45&fm=jpg&cs=tinysrgb&rect=.0%2C.0787992495309568%2C.9999999999999999%2C.8442776735459663`
+    }, {
+        media: '(max-width: 860px)',
+        srcSet: `https://images.fd.nl/BjzAQW5j11hip-ad0R6OxM0CJoA.jpg?fit=crop&crop=faces&auto=format&w=115&h=115&q=45&fm=jpg&cs=tinysrgb&rect=.16125%2C.0%2C.66625%2C.9999999999999999`
+    }, {
+        media: '(min-width: 861px)',
+        srcSet: `https://images.fd.nl/BjzAQW5j11hip-ad0R6OxM0CJoA.jpg?fit=crop&crop=faces&auto=format&w=115&h=115&q=45&fm=jpg&cs=tinysrgb&rect=.16125%2C.0%2C.66625%2C.9999999999999999`
+    }]}
+    related={[{
+        longread: true,
+        title: '‘Als vrouw moet je altijd onafhankelijk zijn’',
+        url: 'https://dev.fd.nl/profiel/1235280/als-vrouw-moet-je-onafhankelijk-zijn',
+        uuid: "12345"
+    }, {
+        title: 'President van de Amerikaanse Fed hamert op onafhankelijkheid',
+        url: 'https://dev.fd.nl/economie-politiek/1235274/president-van-de-amerikaanse-fed-hamert-op-onafhankelijkheid',
+        uuid: "123456"
+    }]}    
+/>
 ```
