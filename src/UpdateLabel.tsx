@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
 
 export default class UpdateLabel extends PureComponent<any, any> {
     render() {
@@ -12,7 +12,7 @@ export default class UpdateLabel extends PureComponent<any, any> {
     }
 }
 
-const GlobalStyle = createGlobalStyle`
+const styles = css`
 .fd-update-label {
     padding: 1px 8px;
     color: #ffeadb;
@@ -24,4 +24,6 @@ const GlobalStyle = createGlobalStyle`
 }
 `;
 
-export {GlobalStyle as UpdateLabelStyle};
+const GlobalStyle = createGlobalStyle`${styles}`;
+
+export {styles as UpdateLabelStyle};

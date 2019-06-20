@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
 
 export interface Props {
     baseUrl: string;
@@ -72,7 +72,7 @@ export default class TeaserFooter extends PureComponent<Props, any> {
     }
 }
 
-const GlobalStyle = createGlobalStyle`
+const styles = css`
 .fd-teaser-footer {
     clear: both;
     padding: 0 10px;
@@ -172,4 +172,6 @@ const GlobalStyle = createGlobalStyle`
 }
 `;
 
-export {GlobalStyle as TeaserFooterStyle};
+const GlobalStyle = createGlobalStyle`${styles}`;
+
+export {styles as TeaserFooterStyle};

@@ -18,5 +18,5 @@ export interface Props {
 export default class TeaserFigure extends PureComponent<Props, any> {
     render(): JSX.Element;
 }
-declare const GlobalStyle: import("styled-components").GlobalStyleComponent<{}, import("styled-components").DefaultTheme>;
-export { GlobalStyle as TeaserFigureStyle };
+declare const styles: import("styled-components").FlattenSimpleInterpolation;
+export { styles as TeaserFigureStyle };

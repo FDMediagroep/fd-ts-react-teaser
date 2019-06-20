@@ -44,4 +44,4 @@ export default class Teaser extends PureComponent<Props, any> {
 /**
  * Used for the FD Style Guide Kitchensink
  */
-export declare const TeaserStyle: import("styled-components").GlobalStyleComponent<{}, import("styled-components").DefaultTheme>;
+export declare const TeaserStyle: import("styled-components").FlattenSimpleInterpolation;

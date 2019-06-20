@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
 
 export interface RelatedArticle {
     longread?: boolean;
@@ -33,7 +33,7 @@ export default class TeaserRelated extends PureComponent<Props, any> {
     }
 }
 
-const GlobalStyle = createGlobalStyle`
+const styles = css`
 .related {
     display: flex;
     flex-direction: column;
@@ -82,4 +82,6 @@ const GlobalStyle = createGlobalStyle`
 }
 `;
 
-export {GlobalStyle as TeaserRelatedStyle};
+const GlobalStyle = createGlobalStyle`${styles}`;
+
+export {styles as TeaserRelatedStyle};

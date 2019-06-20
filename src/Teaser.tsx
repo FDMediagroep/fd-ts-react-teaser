@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
 import Card, { getAllCardStyles, CardTypes } from "@fdmg/fd-card";
 import TypoGraphy, {getAllTextStyles} from "@fdmg/fd-typography";
 import TeaserFigure, { Theme, TeaserFigureStyle, ImageType } from "./TeaserFigure";
@@ -89,7 +89,7 @@ export default class Teaser extends PureComponent<Props, any> {
     }
 }
 
-const GlobalStyle = createGlobalStyle`
+const styles = css`
 .fd-teaser {
     font-family: 'ProximaNovaRegular', Helvetica, sans-serif;
 
@@ -186,15 +186,17 @@ const GlobalStyle = createGlobalStyle`
 }
 `;
 
+const GlobalStyle = createGlobalStyle`${styles}`;
+
 /**
  * Used for the FD Style Guide Kitchensink
  */
-export const TeaserStyle = createGlobalStyle`
-${getAllCardStyles().globalStyle.rules}
-${getAllTextStyles(['teaser-h']).globalStyle.rules}
-${(UpdateLabelStyle as any).globalStyle.rules}
-${(TeaserFigureStyle as any).globalStyle.rules}
-${(TeaserRelatedStyle as any).globalStyle.rules}
-${(TeaserFooterStyle as any).globalStyle.rules}
-${(GlobalStyle as any).globalStyle.rules}
+export const TeaserStyle = css`
+${getAllCardStyles()}
+${getAllTextStyles(['teaser-h'])}
+${UpdateLabelStyle}
+${TeaserFigureStyle}
+${TeaserRelatedStyle}
+${TeaserFooterStyle}
+${styles}
 `;
