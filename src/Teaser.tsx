@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import { createGlobalStyle, css } from "styled-components";
 import Card, { getAllCardStyles, CardTypes } from "@fdmg/fd-card";
 import TypoGraphy, {getAllTextStyles} from "@fdmg/fd-typography";
@@ -44,49 +44,47 @@ export interface Props {
     url: string;
 }
 
-export default class Teaser extends PureComponent<Props, any> {
-    render() {
-        return (
-            <>
-                <GlobalStyle/>
-                <Card cardStyle={this.props.cardStyle ? this.props.cardStyle : 'default'} id={this.props.id} className={`fd-teaser${this.props.className ? ` ${this.props.className}` : ''}${this.props.hideMeta ? ' no-meta' : ''}`}>
-                    <a href={this.props.url}>
-                        <TeaserFigure
-                            figCaption={this.props.figCaption}
-                            image={this.props.image}
-                            sourceSets={this.props.sourceSets}
-                            theme={this.props.theme}
-                        />
-                        {this.props.hideMeta ? null : <div className="meta">
-                            {this.props.updated ? <UpdateLabel/> : <span className="prefix">{this.props.subject}</span>}
-                            <time>{this.props.readableAge}</time>
-                        </div>}
-                        <div className="text-container">
-                            <TypoGraphy textStyle="teaser-h"><h1>{this.props.title}</h1></TypoGraphy>
-                            {this.props.description ? <p className="intro">{this.props.description}</p> : null}
-                        </div>
-                    </a>
-                    {this.props.hideRelated ? null : <TeaserRelated
-                        items={this.props.related}
-                    />}
-                    {this.props.hideFooter ? null : <TeaserFooter
-                        baseUrl={this.props.baseUrl}
-                        bookmarked={this.props.bookmarked}
-                        comments={this.props.comments}
-                        date={this.props.date}
-                        description={this.props.description}
-                        hashTags={this.props.hashTags}
-                        onBookmark={this.props.onBookmark}
-                        shareTitle={this.props.shareTitle}
-                        subject={this.props.subject}
-                        teaserId={this.props.id}
-                        title={this.props.title}
-                        url={this.props.url}
-                    />}
-                </Card>
-            </>
-        );
-    }
+export default function Teaser(props: Props) {
+    return (
+        <>
+            <GlobalStyle/>
+            <Card cardStyle={props.cardStyle ? props.cardStyle : 'default'} id={props.id} className={`fd-teaser${props.className ? ` ${props.className}` : ''}${props.hideMeta ? ' no-meta' : ''}`}>
+                <a href={props.url}>
+                    <TeaserFigure
+                        figCaption={props.figCaption}
+                        image={props.image}
+                        sourceSets={props.sourceSets}
+                        theme={props.theme}
+                    />
+                    {props.hideMeta ? null : <div className="meta">
+                        {props.updated ? <UpdateLabel/> : <span className="prefix">{props.subject}</span>}
+                        <time>{props.readableAge}</time>
+                    </div>}
+                    <div className="text-container">
+                        <TypoGraphy textStyle="teaser-h"><h1>{props.title}</h1></TypoGraphy>
+                        {props.description ? <p className="intro">{props.description}</p> : null}
+                    </div>
+                </a>
+                {props.hideRelated ? null : <TeaserRelated
+                    items={props.related}
+                />}
+                {props.hideFooter ? null : <TeaserFooter
+                    baseUrl={props.baseUrl}
+                    bookmarked={props.bookmarked}
+                    comments={props.comments}
+                    date={props.date}
+                    description={props.description}
+                    hashTags={props.hashTags}
+                    onBookmark={props.onBookmark}
+                    shareTitle={props.shareTitle}
+                    subject={props.subject}
+                    teaserId={props.id}
+                    title={props.title}
+                    url={props.url}
+                />}
+            </Card>
+        </>
+    );
 }
 
 const styles = css`
@@ -186,8 +184,6 @@ const styles = css`
 }
 `;
 
-const GlobalStyle = createGlobalStyle`${styles}`;
-
 /**
  * Used for the FD Style Guide Kitchensink
  */
@@ -200,3 +196,5 @@ ${TeaserRelatedStyle}
 ${TeaserFooterStyle}
 ${styles}
 `;
+
+const GlobalStyle = createGlobalStyle`${TeaserStyle}`;

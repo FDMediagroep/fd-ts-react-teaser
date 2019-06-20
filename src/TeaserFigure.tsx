@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import { createGlobalStyle, css } from "styled-components";
 
 export interface SourceSetType {
@@ -29,21 +29,19 @@ export interface Props {
     theme?: Theme;
 }
 
-export default class TeaserFigure extends PureComponent<Props, any> {
-    render() {
-        return (
-            <>
-                <GlobalStyle/>
-                <figure className={`fd-teaser-figure${this.props.theme ? ` themed ${this.props.theme}` : ''}`}>
-                    <picture>
-                        {this.props.sourceSets ? this.props.sourceSets.map((srcSet) => <source key={srcSet.media} media={srcSet.media} srcSet={srcSet.srcSet}/>) : null}
-                        {this.props.image ? <img src={this.props.image.src} alt={this.props.image.alt} title={this.props.image ? this.props.image.title : ''}/> : null}
-                    </picture>
-                    {this.props.theme ? <figcaption>{this.props.figCaption}</figcaption> : null}
-                </figure>
-            </>
-        );
-    }
+export default function TeaserFigure(props: Props) {
+    return (
+        <>
+            <GlobalStyle/>
+            <figure className={`fd-teaser-figure${props.theme ? ` themed ${props.theme}` : ''}`}>
+                <picture>
+                    {props.sourceSets ? props.sourceSets.map((srcSet) => <source key={srcSet.media} media={srcSet.media} srcSet={srcSet.srcSet}/>) : null}
+                    {props.image ? <img src={props.image.src} alt={props.image.alt} title={props.image ? props.image.title : ''}/> : null}
+                </picture>
+                {props.theme ? <figcaption>{props.figCaption}</figcaption> : null}
+            </figure>
+        </>
+    );
 }
 
 const styles = css`

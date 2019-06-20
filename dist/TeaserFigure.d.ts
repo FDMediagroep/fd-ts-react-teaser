@@ -1,4 +1,3 @@
-import { PureComponent } from "react";
 export interface SourceSetType {
     media: string;
     srcSet: string;
@@ -15,8 +14,6 @@ export interface Props {
     figCaption?: string;
     theme?: Theme;
 }
-export default class TeaserFigure extends PureComponent<Props, any> {
-    render(): JSX.Element;
-}
+export default function TeaserFigure(props: Props): JSX.Element;
 declare const styles: import("styled-components").FlattenSimpleInterpolation;
 export { styles as TeaserFigureStyle };

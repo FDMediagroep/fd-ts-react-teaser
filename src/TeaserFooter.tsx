@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import { createGlobalStyle, css } from "styled-components";
 
 export interface Props {
@@ -19,57 +19,55 @@ export interface Props {
     url: string;
 }
 
-export default class TeaserFooter extends PureComponent<Props, any> {
-    render() {
-        return (
-            <>
-                <GlobalStyle/>
-                <footer className={`fd-teaser-footer${this.props.className ? ` ${this.props.className}` : ''}`}>
-                    <menu>
-                        <span className="placeholder"/>
-                        <a className="share-social" href="javascript: void(0);">
-                            <i
-                                data-url={this.props.url}
-                                data-id={this.props.teaserId}
-                                data-title={this.props.title}
-                                data-section={this.props.subject}
-                                data-hashtags={this.props.hashTags}
-                                className="icon-share-alt"
-                                title={this.props.shareTitle ? this.props.shareTitle : 'Delen'}
-                            />
-                            <span className="icon-label">Delen</span>
-                        </a>
-                        <a
-                            href="javascript: void(0);"
-                            className={`favorite${this.props.bookmarked ? ' selected' : ''}`}
-                            data-key={this.props.teaserId}
-                            data-addurl='/add-favorite'
-                            data-deleteurl='/delete-favorite'
-                            data-title={this.props.title}
-                            data-url={this.props.url}
-                            data-articleid={this.props.teaserId}
-                            title="Bewaren"
-                            id={`favorite${this.props.teaserId}`}
-                            onClick={this.props.onBookmark}
-                        >
-                            <i className="icon-bookmark" title={this.props.bookmarkTitle ? this.props.bookmarkTitle : 'Bewaren'}/>
-                            <i className="icon-bookmark1" title={this.props.removeBookmarkTitle ? this.props.removeBookmarkTitle : 'Verwijder van bewaarlijst'}/>
-                            <span className="icon-label">Bewaren</span>
-                        </a>
-                        <a data-articleid={this.props.teaserId} className="comments-link" href={`${this.props.url}#comments`}>
-                            {this.props.comments ? (
-                                <>
-                                    <i className="icon-comment-alt"/>
-                                    <span className="comments-count">{this.props.comments}</span>
-                                    <span className="comments-suffix">{this.props.comments > 1 ? 'reacties' : 'reactie'}</span>
-                                </>
-                            ) : null}
-                        </a>
-                    </menu>
-                </footer>
-            </>
-        );
-    }
+export default function TeaserFooter(props: Props) {
+    return (
+        <>
+            <GlobalStyle/>
+            <footer className={`fd-teaser-footer${props.className ? ` ${props.className}` : ''}`}>
+                <menu>
+                    <span className="placeholder"/>
+                    <a className="share-social" href="javascript: void(0);">
+                        <i
+                            data-url={props.url}
+                            data-id={props.teaserId}
+                            data-title={props.title}
+                            data-section={props.subject}
+                            data-hashtags={props.hashTags}
+                            className="icon-share-alt"
+                            title={props.shareTitle ? props.shareTitle : 'Delen'}
+                        />
+                        <span className="icon-label">Delen</span>
+                    </a>
+                    <a
+                        href="javascript: void(0);"
+                        className={`favorite${props.bookmarked ? ' selected' : ''}`}
+                        data-key={props.teaserId}
+                        data-addurl='/add-favorite'
+                        data-deleteurl='/delete-favorite'
+                        data-title={props.title}
+                        data-url={props.url}
+                        data-articleid={props.teaserId}
+                        title="Bewaren"
+                        id={`favorite${props.teaserId}`}
+                        onClick={props.onBookmark}
+                    >
+                        <i className="icon-bookmark" title={props.bookmarkTitle ? props.bookmarkTitle : 'Bewaren'}/>
+                        <i className="icon-bookmark1" title={props.removeBookmarkTitle ? props.removeBookmarkTitle : 'Verwijder van bewaarlijst'}/>
+                        <span className="icon-label">Bewaren</span>
+                    </a>
+                    <a data-articleid={props.teaserId} className="comments-link" href={`${props.url}#comments`}>
+                        {props.comments ? (
+                            <>
+                                <i className="icon-comment-alt"/>
+                                <span className="comments-count">{props.comments}</span>
+                                <span className="comments-suffix">{props.comments > 1 ? 'reacties' : 'reactie'}</span>
+                            </>
+                        ) : null}
+                    </a>
+                </menu>
+            </footer>
+        </>
+    );
 }
 
 const styles = css`

@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import { CardTypes } from "@fdmg/fd-card";
 import TeaserFigure, { Theme, TeaserFigureStyle, ImageType } from "./TeaserFigure";
 import TeaserFooter, { TeaserFooterStyle } from "./TeaserFooter";
@@ -38,9 +38,7 @@ export interface Props {
     updated?: boolean;
     url: string;
 }
-export default class Teaser extends PureComponent<Props, any> {
-    render(): JSX.Element;
-}
+export default function Teaser(props: Props): JSX.Element;
 /**
  * Used for the FD Style Guide Kitchensink
  */

@@ -1,4 +1,3 @@
-import { PureComponent } from "react";
 export interface RelatedArticle {
     longread?: boolean;
     title: string;
@@ -8,8 +7,6 @@ export interface RelatedArticle {
 export interface Props {
     items?: RelatedArticle[];
 }
-export default class TeaserRelated extends PureComponent<Props, any> {
-    render(): JSX.Element | null;
-}
+export default function TeaserRelated(props: Props): JSX.Element | null;
 declare const styles: import("styled-components").FlattenSimpleInterpolation;
 export { styles as TeaserRelatedStyle };

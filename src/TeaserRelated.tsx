@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import { createGlobalStyle, css } from "styled-components";
 
 export interface RelatedArticle {
@@ -12,25 +12,23 @@ export interface Props {
     items?: RelatedArticle[];
 }
 
-export default class TeaserRelated extends PureComponent<Props, any> {
-    render() {
-        if (!this.props.items) { return null; }
-        return (
-            <>
-                <GlobalStyle/>
-                <nav className="related">
-                    {this.props.items.map((item: RelatedArticle) => {
-                        return (
-                            <a key={item.uuid} className={`related-link${item.longread ? ' longread' : ''}`} href={item.url}>
-                                <span className="related-title">{item.title}</span>
-                                <i className="icon-chevron-right"/>
-                            </a>
-                        );
-                    })}
-                </nav>
-            </>
-        );
-    }
+export default function TeaserRelated(props: Props) {
+    if (!props.items) { return null; }
+    return (
+        <>
+            <GlobalStyle/>
+            <nav className="related">
+                {props.items.map((item: RelatedArticle) => {
+                    return (
+                        <a key={item.uuid} className={`related-link${item.longread ? ' longread' : ''}`} href={item.url}>
+                            <span className="related-title">{item.title}</span>
+                            <i className="icon-chevron-right"/>
+                        </a>
+                    );
+                })}
+            </nav>
+        </>
+    );
 }
 
 const styles = css`

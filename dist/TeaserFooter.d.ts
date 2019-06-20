@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React from "react";
 export interface Props {
     baseUrl: string;
     bookmarked?: boolean;
@@ -16,8 +16,6 @@ export interface Props {
     title: string;
     url: string;
 }
-export default class TeaserFooter extends PureComponent<Props, any> {
-    render(): JSX.Element;
-}
+export default function TeaserFooter(props: Props): JSX.Element;
 declare const styles: import("styled-components").FlattenSimpleInterpolation;
 export { styles as TeaserFooterStyle };

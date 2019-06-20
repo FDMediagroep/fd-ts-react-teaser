@@ -1,15 +1,13 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import { createGlobalStyle, css } from "styled-components";
 
-export default class UpdateLabel extends PureComponent<any, any> {
-    render() {
-        return (
-            <>
-                <GlobalStyle/>
-                <span className="fd-update-label">{this.props.children ? this.props.children : 'UPDATE'}</span>
-            </>
-        );
-    }
+export default function UpdateLabel(props: any) {
+    return (
+        <>
+            <GlobalStyle/>
+            <span className="fd-update-label">{props.children ? props.children : 'UPDATE'}</span>
+        </>
+    );
 }
 
 const styles = css`
