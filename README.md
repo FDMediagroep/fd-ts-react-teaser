@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/FDMediagroep/fd-ts-react-teaser.svg?branch=master)](https://travis-ci.org/FDMediagroep/fd-ts-react-teaser)
 [![Coverage Status](https://coveralls.io/repos/github/FDMediagroep/fd-ts-react-teaser/badge.svg?branch=master)](https://coveralls.io/github/FDMediagroep/fd-ts-react-teaser?branch=master)
 [![npm version](https://badge.fury.io/js/%40fdmg%2Ffd-teaser.svg)](https://badge.fury.io/js/%40fdmg%2Ffd-teaser)
-[![Greenkeeper badge](https://badges.greenkeeper.io/FDMediagroep/fd-ts-react-teaser.svg)](https://greenkeeper.io/)
+
 
 # fd-teaser
 FD-themed default teaser.
