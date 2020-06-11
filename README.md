@@ -1,20 +1,26 @@
+> :exclamation: **DEPRECATED** :exclamation: : Superseded by @fdmg/design-system. See: https://github.com/FDMediagroep/fd-design-system
+
 [![Build Status](https://travis-ci.org/FDMediagroep/fd-ts-react-teaser.svg?branch=master)](https://travis-ci.org/FDMediagroep/fd-ts-react-teaser)
 [![Coverage Status](https://coveralls.io/repos/github/FDMediagroep/fd-ts-react-teaser/badge.svg?branch=master)](https://coveralls.io/github/FDMediagroep/fd-ts-react-teaser?branch=master)
 [![npm version](https://badge.fury.io/js/%40fdmg%2Ffd-teaser.svg)](https://badge.fury.io/js/%40fdmg%2Ffd-teaser)
 
-
 # fd-teaser
+
 FD-themed default teaser.
 
 # Installation
-* Run `npm i -D @fdmg/fd-teaser`
+
+-   Run `npm i -D @fdmg/fd-teaser`
 
 # Demo
+
 To run the demo, check-out this repository and run `npm run build-demo`.
 After the build succeeded you can open `dist/demo.html` with your webbrowser.
-* [Demo](http://static.fd.nl/react/teaser/demo.html)
+
+-   [Demo](http://static.fd.nl/react/teaser/demo.html)
 
 # Usage
+
 ```
 import Teaser from '@fdmg/fd-teaser';
 ...
@@ -50,6 +56,6 @@ import Teaser from '@fdmg/fd-teaser';
         title: 'President van de Amerikaanse Fed hamert op onafhankelijkheid',
         url: 'https://dev.fd.nl/economie-politiek/1235274/president-van-de-amerikaanse-fed-hamert-op-onafhankelijkheid',
         uuid: "123456"
-    }]}    
+    }]}
 />
 ```
